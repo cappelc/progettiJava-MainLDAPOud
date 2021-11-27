@@ -10,6 +10,7 @@ import javax.naming.directory.BasicAttribute;
 import javax.naming.directory.BasicAttributes;
 import javax.naming.directory.InitialDirContext;
 import javax.naming.ldap.LdapContext;
+
 public class MainLdap
 {
   private static String paramHOSTNAME = “HOSTNAME”;
@@ -123,6 +124,7 @@ public class MainLdap
     String decode_password;
     return 0;
   }
+
   public static void main(String[] args)
   {
     MainLdap temp = new MainLdap();
