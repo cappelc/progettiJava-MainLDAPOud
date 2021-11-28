@@ -95,6 +95,7 @@ public class MainLdap
         return 0;
       }
       logger.logp(Level.FINEST, CLASS_NAME, methodName, “utente=” + dnUser + ” non esiste; lo creo!!“);
+      
       Attribute classes = new BasicAttribute(“objectclass”);
       BasicAttributes attrs = new BasicAttributes();
       classes.add(“top”);
@@ -110,6 +111,7 @@ public class MainLdap
       attrs.put(“uid”, cnValue);
       attrs.put(“sn”, cnValue);
       attrs.put(passwordattr, user_password);
+      logger.logp(Level.FINEST, CLASS_NAME, methodName, “utente=” + dnUser + ”attivo la create con createSubcontext!!“);
       ctx.createSubcontext(dnUser, attrs);
     }
     catch (NamingException ne)
